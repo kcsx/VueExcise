@@ -1,18 +1,22 @@
 <template>
-  <div id="app">
+  <div>
     <h1>{{ title }}</h1>
+    <button @click="add">add{{ cnt }}</button>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
 export default {
   data: () => ({
     title: "Sssss",
+    cnt: 0,
   }),
+  methods: {
+    add() {
+      ++this.cnt;
+      console.log(this.cnt);
+    },
+  },
 };
 </script>
 
